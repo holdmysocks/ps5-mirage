@@ -1828,6 +1828,35 @@ was running.
   test so far used the title as a folder under `/data/homebrew`.
 - README.md written for the public repository.
 
+### F1: the release .ffpfsc on the console (2026-10-05, prepared, not launched)
+
+User: test the ffpfsc on the console. The console runs ShadowMountPlus
+(`/data/shadowmount`, scan paths `/data/homebrew` and `/data/games`, other
+titles there are .ffpfsc images with free names).
+
+- The boilerplate's notes say not to keep a folder and an image of one title
+  in the scan paths. So, with the title closed (its log showed it exited),
+  the folder `/data/homebrew/PPSA99741` was **moved** over FTP (RNFR/RNTO) to
+  `/data/mirage/PPSA99741-folder`: out of the scan path, nothing deleted, to
+  be moved back the same way if the image fails.
+- Uploaded `out\release\PPSA99741.ffpfsc` (16,252,928 bytes) to
+  `/data/homebrew/`, read back equal.
+- ShadowMountPlus's log: "source removed" for the folder, then 25 s later it
+  mounted the image (pfsc, then the exFAT inside), "Remounting: Mirage",
+  nullfs on `/system_ex/app/PPSA99741`, `mount.lnk` and `mount_img.lnk`
+  written, then unmounted again until the title is started. One line "image
+  source cache update failed": the EVO Player image has the same line.
+- Next: the user opens Mirage from the image (release payload, version
+  string 0.13.1, replaces the running 0.13.1-dev).
+- **Result (user): "Looks good it works."** The release image installs and
+  runs through ShadowMountPlus. The old folder is still at
+  `/data/mirage/PPSA99741-folder` for the user to remove. The release notes
+  and README still say the image is untried: to be corrected.
+- User asked whether Android casting can be added later. Answered: not
+  Google Cast itself (receivers need a Google-signed device certificate);
+  possible routes are a DLNA/UPnP renderer, or Android apps that send
+  AirPlay (untested against Mirage). Parked until the rest is done.
+
 ### Local file casting: first look (2026-10-05, PC only)
 
 - UxPlay's `/play` handler (`http_handlers.h`) already takes a plain

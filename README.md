@@ -26,8 +26,9 @@ Unofficial homebrew. Not affiliated with Apple or Sony.
 - **Casting from apps other than YouTube.** Apps that draw their own video
   (VLC, for one) only hand AirPlay their sound; use screen mirroring for those.
 - **HEVC, 4K and HDR.** Everything is H.264 at up to 1080p for now.
-- Tested on one console only: a PS5 Pro on firmware 13.42. Other models and
-  firmwares may work and have not been tried.
+- Tested on one console only: a PS5 Pro on firmware 13.42, with the release
+  image installed through ShadowMountPlus. Other models, firmwares and
+  loaders may work and have not been tried.
 
 ## Installing
 
