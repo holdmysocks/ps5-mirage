@@ -1,0 +1,17 @@
+# Upstream sources cloned for reading and for building against (see NOTES.md
+# for the commits): UxPlay, ProsperoLight, EVO Player, nuvio, libplist.
+/ref/
+
+# Downloaded toolchain pieces: the pacbrew archive and its unpacked libraries.
+/toolchain/
+
+# Build products and intermediate files.
+/build/
+
+# Built ELFs and title folders, and logs from console runs. The logs name
+# devices on the local network and carry addresses; they stay out of the repo.
+/out/
+
+# The home screen backgrounds, 8 MB each: tools\make-art.py writes them
+# (their PNG previews are kept).
+/title/sce_sys/*.dds

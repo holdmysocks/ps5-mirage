@@ -1,0 +1,3 @@
+# Sources are built on Windows and in WSL and are sent to a console: keep one
+# kind of line ending everywhere, whatever the local git setting.
+* text=auto eol=lf
